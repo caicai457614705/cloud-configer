@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri:  http://gitlab.apitops.com/wangzhipeng2817/spring-cloud-config.git
+          search-paths: dev
+          username: wangzhipeng2817
+          password: shengjing123...
+        default-label: master
+
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.100.89:8761/eureka/
